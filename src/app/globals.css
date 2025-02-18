@@ -2,20 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Fakt Pro Blond";
+  src: url("https://db.onlinewebfonts.com/t/6e1998524754eeea1b0392e0eeae468d.eot");
+  src: url("https://db.onlinewebfonts.com/t/6e1998524754eeea1b0392e0eeae468d.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/6e1998524754eeea1b0392e0eeae468d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/6e1998524754eeea1b0392e0eeae468d.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/6e1998524754eeea1b0392e0eeae468d.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/6e1998524754eeea1b0392e0eeae468d.svg#Fakt Pro Blond")format("svg");
+}
+
 :root {
-  --background: #ffffff;
+  --background: #FDF0D5;
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/*  Fonts */
+.cormorant-garamond {
+  font-family: var(--font-cormorant-garamond);
+}
+
+.gt-super {
+  font-family: var(--font-gt-super);
+}
+
+.fakt-pro-blond {
+  font-family: "Fakt Pro Blond";
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  --sb-track-color: #d6d6d6;
+  --sb-thumb-color: #336683;
+  --sb-size: 12px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 5px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+/* Animations */
+@keyframes waveMotion {
+
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(1.2);
+    /* Increase height */
+  }
+}
+
+.wave-animation {
+  animation: waveMotion 5s ease-in-out infinite;
+}
+
+.wave-delay-1 {
+  animation-delay: 1s;
+}
+
+.wave-delay-2 {
+  animation-delay: 2s;
+}
+
+.wave-delay-3 {
+  animation-delay: 3s;
 }
