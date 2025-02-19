@@ -19,7 +19,7 @@ export default function Home() {
                 "A row of boats standing outside a dock on stands ready for maintenance",
             blockTitle: "Routine Maintenance",
             blockBody:
-                "Diligent upkeep designed to preserve your outboard’s integrity, ensuring seamless operation through time-honored maintenance practices.",
+                "Diligent upkeep designed to preserve your outboard’s integrity, ensuring seamless operation through time-honoured maintenance practices.",
             blockLink: "/service/routine-maintenance",
         },
         {
@@ -122,11 +122,11 @@ export default function Home() {
             </section>
 
             {/* Our Services Section */}
-            <section className="w-full grid grid-cols-12 gap-5 fakt-pro-blond px-[2vw] text-[#D4A373] h-fit">
+            <section className="w-full grid grid-cols-12 gap-5 fakt-pro-blond px-[2vw]  text-[#D4A373] h-fit">
                 {/* Left Side */}
                 <div className="col-span-7 h-full relative gt-super uppercase text-[2vw]">
                     {/* Sticky div */}
-                    <div className="w-[80%] top-[2vw] sticky">
+                    <div className="w-[80%] top-[5vw] sticky">
                         <h2 className="text-[6vw] w-full uppercase">
                             <span className="">Our</span>{" "}
                             <span className="">Services</span>
