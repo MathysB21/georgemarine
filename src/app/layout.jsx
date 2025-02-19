@@ -2,6 +2,9 @@ import { Cormorant_Garamond } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
+import SmoothScrolling from "@/components/SmoothScrolling";
+import Navbar from "@/components/Navbar";
+
 const cg_init = Cormorant_Garamond({
     subsets: ["latin"],
     weight: ["400", "500", "600"],
@@ -46,7 +49,10 @@ export default function RootLayout({ children }) {
             <body
                 className={`${cg_init.variable} ${gtSuper.variable} antialiased`}
             >
-                {children}
+                <SmoothScrolling>
+                    <Navbar />
+                    {children}
+                </SmoothScrolling>
             </body>
         </html>
     );
